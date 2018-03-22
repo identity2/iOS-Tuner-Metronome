@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +15,102 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinimalTunerMetronome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="opm-zX-F1s" userLabel="Top Screen">
+                                <rect key="frame" x="41.333333333333343" y="57.666666666666657" width="331.33333333333326" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="opm-zX-F1s" secondAttribute="height" multiplier="177:100" id="NDv-mo-Bhu"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="dVp-qq-41H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-M9-qUV" userLabel="Left Button">
+                                <rect key="frame" x="61.666666666666657" y="282" width="54" height="78.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0hE-M9-qUV" secondAttribute="height" multiplier="92:133" id="31k-t0-p5u"/>
+                                </constraints>
+                                <state key="normal" image="left_arrow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSZ-NY-SXQ" userLabel="Right Button">
+                                <rect key="frame" x="288.33333333333331" y="282" width="54" height="78.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eSZ-NY-SXQ" secondAttribute="height" multiplier="92:133" id="P72-sf-scv"/>
+                                </constraints>
+                                <state key="normal" image="right_arrow"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_off_icon" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-7d-gIY" userLabel="Sound Icon">
+                                <rect key="frame" x="149.33333333333334" y="419" width="106.33333333333334" height="106.33333333333337"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_frame" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-hK-ZbC" userLabel="Small Screen">
+                                <rect key="frame" x="135.66666666666669" y="282" width="132.66666666666669" height="78.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vct-hK-ZbC" secondAttribute="height" multiplier="170:100" id="792-Pl-hGd"/>
+                                </constraints>
+                            </imageView>
+                            <button userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smb-eH-k1p" userLabel="Sound Button">
+                                <rect key="frame" x="149.33333333333334" y="419.66666666666669" width="106.33333333333334" height="106.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Smb-eH-k1p" secondAttribute="height" multiplier="1:1" id="k8a-KC-cvu"/>
+                                </constraints>
+                                <state key="normal" image="circle"/>
+                            </button>
+                            <button userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocr-uk-kLF" userLabel="Toggle" customClass="ToggleView" customModule="MinimalTunerMetronome" customModuleProvider="target">
+                                <rect key="frame" x="159.66666666666666" y="587.66666666666663" width="85" height="35.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ocr-uk-kLF" secondAttribute="height" multiplier="236:100" id="Bsu-Kr-lYh"/>
+                                </constraints>
+                                <state key="normal" image="toggle_box"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuner_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zXO-rV-tuu" userLabel="Tuner Icon">
+                                <rect key="frame" x="106.33333333333333" y="578.33333333333337" width="53.333333333333329" height="53.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zXO-rV-tuu" secondAttribute="height" multiplier="1:1" id="YNq-J8-CLM"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metronome_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qnK-OZ-r4I" userLabel="Metronome Icon">
+                                <rect key="frame" x="251.66666666666666" y="578.33333333333337" width="53.333333333333343" height="53.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qnK-OZ-r4I" secondAttribute="height" multiplier="1:1" id="Rua-YN-p9i"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qnK-OZ-r4I" firstAttribute="height" secondItem="ocr-uk-kLF" secondAttribute="height" multiplier="1.5" id="1P8-7d-6Ed"/>
+                            <constraint firstItem="qnK-OZ-r4I" firstAttribute="centerY" secondItem="ocr-uk-kLF" secondAttribute="centerY" id="1tw-Wu-WG0"/>
+                            <constraint firstItem="0hE-M9-qUV" firstAttribute="height" secondItem="Vct-hK-ZbC" secondAttribute="height" id="1xo-ac-ZTK"/>
+                            <constraint firstItem="Vct-hK-ZbC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-5" id="6gL-wk-bQR"/>
+                            <constraint firstItem="Vct-hK-ZbC" firstAttribute="width" secondItem="opm-zX-F1s" secondAttribute="width" multiplier="0.4" id="9l4-bs-gVO"/>
+                            <constraint firstItem="ocr-uk-kLF" firstAttribute="centerX" secondItem="Smb-eH-k1p" secondAttribute="centerX" id="B6L-b3-o9X"/>
+                            <constraint firstItem="qnK-OZ-r4I" firstAttribute="leading" secondItem="ocr-uk-kLF" secondAttribute="trailing" constant="7" id="FFM-zF-BqN"/>
+                            <constraint firstItem="ocr-uk-kLF" firstAttribute="leading" secondItem="zXO-rV-tuu" secondAttribute="trailing" id="Ge7-jt-Ehz"/>
+                            <constraint firstItem="Smb-eH-k1p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vct-hK-ZbC" secondAttribute="bottom" constant="30" id="Jak-j2-4Ih"/>
+                            <constraint firstItem="mSC-7d-gIY" firstAttribute="centerY" secondItem="Smb-eH-k1p" secondAttribute="centerY" id="Lgc-xy-rFv"/>
+                            <constraint firstItem="zXO-rV-tuu" firstAttribute="height" secondItem="ocr-uk-kLF" secondAttribute="height" multiplier="1.5" id="PS1-Xe-g9Z"/>
+                            <constraint firstItem="zXO-rV-tuu" firstAttribute="centerY" secondItem="ocr-uk-kLF" secondAttribute="centerY" id="QQz-ot-HFi"/>
+                            <constraint firstItem="eSZ-NY-SXQ" firstAttribute="leading" secondItem="Vct-hK-ZbC" secondAttribute="trailing" constant="20" id="XyW-ii-S13"/>
+                            <constraint firstItem="eSZ-NY-SXQ" firstAttribute="height" secondItem="Vct-hK-ZbC" secondAttribute="height" id="fW4-9g-NQU"/>
+                            <constraint firstItem="Vct-hK-ZbC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" priority="999" id="faR-KW-uuC"/>
+                            <constraint firstItem="mSC-7d-gIY" firstAttribute="centerX" secondItem="Smb-eH-k1p" secondAttribute="centerX" id="foX-pi-9Pm"/>
+                            <constraint firstItem="eSZ-NY-SXQ" firstAttribute="centerY" secondItem="Vct-hK-ZbC" secondAttribute="centerY" id="gC8-Jl-16j"/>
+                            <constraint firstItem="0hE-M9-qUV" firstAttribute="trailing" secondItem="Vct-hK-ZbC" secondAttribute="leading" constant="-20" id="hK1-nU-qO6"/>
+                            <constraint firstItem="mSC-7d-gIY" firstAttribute="width" secondItem="Smb-eH-k1p" secondAttribute="width" id="jfi-TQ-yt5"/>
+                            <constraint firstItem="opm-zX-F1s" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="k3J-8R-r6i"/>
+                            <constraint firstItem="opm-zX-F1s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lTB-Rs-Ek8"/>
+                            <constraint firstItem="Vct-hK-ZbC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="opm-zX-F1s" secondAttribute="bottom" constant="25" id="m1H-aD-CLp"/>
+                            <constraint firstItem="Smb-eH-k1p" firstAttribute="width" secondItem="Vct-hK-ZbC" secondAttribute="width" multiplier="0.8" id="mNu-B7-4TX"/>
+                            <constraint firstItem="ocr-uk-kLF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Smb-eH-k1p" secondAttribute="bottom" constant="30" id="pGu-KX-Bnf"/>
+                            <constraint firstItem="Smb-eH-k1p" firstAttribute="centerX" secondItem="Vct-hK-ZbC" secondAttribute="centerX" id="ptm-3u-Cer"/>
+                            <constraint firstItem="0hE-M9-qUV" firstAttribute="centerY" secondItem="Vct-hK-ZbC" secondAttribute="centerY" id="qqV-FY-zfF"/>
+                            <constraint firstItem="ocr-uk-kLF" firstAttribute="width" secondItem="Smb-eH-k1p" secondAttribute="width" multiplier="0.8" id="sgB-KC-SIf"/>
+                            <constraint firstItem="opm-zX-F1s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" priority="999" id="tSb-fR-ohN"/>
+                            <constraint firstItem="mSC-7d-gIY" firstAttribute="height" secondItem="Smb-eH-k1p" secondAttribute="height" id="vVu-AD-53e"/>
+                            <constraint firstItem="Smb-eH-k1p" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.25" priority="998" id="xu3-UM-gej"/>
+                            <constraint firstItem="ocr-uk-kLF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.6" priority="997" id="yEu-HJ-NE2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +118,15 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle" width="335" height="335"/>
+        <image name="left_arrow" width="92" height="133"/>
+        <image name="metronome_icon" width="220" height="212"/>
+        <image name="right_arrow" width="92" height="133"/>
+        <image name="screen" width="1016" height="573"/>
+        <image name="small_frame" width="265" height="186"/>
+        <image name="sound_off_icon" width="335" height="335"/>
+        <image name="toggle_box" width="329" height="139"/>
+        <image name="tuner_icon" width="220" height="212"/>
+    </resources>
 </document>

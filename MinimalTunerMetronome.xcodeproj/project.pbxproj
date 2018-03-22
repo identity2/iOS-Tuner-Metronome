@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9AC199F8AAC02FE9207F768 /* Pods_MinimalTunerMetronome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */; };
+		D96B7DAB2063F5A00041408C /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B7DAA2063F5A00041408C /* ToggleView.swift */; };
 		D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993A76F2062A10400387AD9 /* AppDelegate.swift */; };
 		D993A7722062A10400387AD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993A7712062A10400387AD9 /* ViewController.swift */; };
 		D993A7752062A10400387AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993A7732062A10400387AD9 /* Main.storyboard */; };
@@ -15,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinimalTunerMetronome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2FBD8EE7FE49A3E9BD4A41 /* Pods-MinimalTunerMetronome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinimalTunerMetronome.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome.release.xcconfig"; sourceTree = "<group>"; };
+		D96B7DAA2063F5A00041408C /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToggleView.swift; path = MinimalTunerMetronome/UI/ToggleView.swift; sourceTree = SOURCE_ROOT; };
 		D993A76C2062A10400387AD9 /* MinimalTunerMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimalTunerMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D993A76F2062A10400387AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D993A7712062A10400387AD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		D993A7762062A10400387AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D993A7792062A10400387AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D993A77B2062A10400387AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E333BFCAF0E15E0C64C910B2 /* Pods-MinimalTunerMetronome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinimalTunerMetronome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AC199F8AAC02FE9207F768 /* Pods_MinimalTunerMetronome.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9043084756F8F569D8DA6FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9C09DEF265423014D65974A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E333BFCAF0E15E0C64C910B2 /* Pods-MinimalTunerMetronome.debug.xcconfig */,
+				9D2FBD8EE7FE49A3E9BD4A41 /* Pods-MinimalTunerMetronome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D96B7DA92063F5500041408C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D96B7DAA2063F5A00041408C /* ToggleView.swift */,
+			);
+			name = UI;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D993A7632062A10300387AD9 = {
 			isa = PBXGroup;
 			children = (
 				D993A76E2062A10400387AD9 /* MinimalTunerMetronome */,
 				D993A76D2062A10400387AD9 /* Products */,
+				C9C09DEF265423014D65974A /* Pods */,
+				C9043084756F8F569D8DA6FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +89,7 @@
 		D993A76E2062A10400387AD9 /* MinimalTunerMetronome */ = {
 			isa = PBXGroup;
 			children = (
+				D96B7DA92063F5500041408C /* UI */,
 				D993A76F2062A10400387AD9 /* AppDelegate.swift */,
 				D993A7712062A10400387AD9 /* ViewController.swift */,
 				D993A7732062A10400387AD9 /* Main.storyboard */,
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D993A77E2062A10400387AD9 /* Build configuration list for PBXNativeTarget "MinimalTunerMetronome" */;
 			buildPhases = (
+				6A865EFB5F51BDDD832114A2 /* [CP] Check Pods Manifest.lock */,
 				D993A7682062A10400387AD9 /* Sources */,
 				D993A7692062A10400387AD9 /* Frameworks */,
 				D993A76A2062A10400387AD9 /* Resources */,
+				01B085DB13AAB59D4721BAF3 /* [CP] Embed Pods Frameworks */,
+				944C785C9345CA00F1EE533E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +170,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01B085DB13AAB59D4721BAF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A865EFB5F51BDDD832114A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MinimalTunerMetronome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		944C785C9345CA00F1EE533E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D993A7682062A10400387AD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D993A7722062A10400387AD9 /* ViewController.swift in Sources */,
+				D96B7DAB2063F5A00041408C /* ToggleView.swift in Sources */,
 				D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +363,7 @@
 		};
 		D993A77F2062A10400387AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E333BFCAF0E15E0C64C910B2 /* Pods-MinimalTunerMetronome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +379,7 @@
 		};
 		D993A7802062A10400387AD9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2FBD8EE7FE49A3E9BD4A41 /* Pods-MinimalTunerMetronome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
