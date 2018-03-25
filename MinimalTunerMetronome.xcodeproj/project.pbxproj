@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		C9AC199F8AAC02FE9207F768 /* Pods_MinimalTunerMetronome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */; };
 		D96B7DAB2063F5A00041408C /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B7DAA2063F5A00041408C /* ToggleView.swift */; };
+		D98C4CF420654ED3005A5A10 /* SmallScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CF320654ED3005A5A10 /* SmallScreenView.swift */; };
+		D98C4CF820654F53005A5A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CF720654F53005A5A10 /* ViewController.swift */; };
+		D98C4CFE206556A8005A5A10 /* DigitNoteImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CFD206556A8005A5A10 /* DigitNoteImages.swift */; };
+		D98C4D00206653D1005A5A10 /* MetronomeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CFF206653D1005A5A10 /* MetronomeAnimationView.swift */; };
+		D98C4D022066694B005A5A10 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4D012066694B005A5A10 /* SoundPlayer.swift */; };
+		D98C4D04206767E9005A5A10 /* CGAffineTransformExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */; };
 		D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993A76F2062A10400387AD9 /* AppDelegate.swift */; };
-		D993A7722062A10400387AD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993A7712062A10400387AD9 /* ViewController.swift */; };
 		D993A7752062A10400387AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993A7732062A10400387AD9 /* Main.storyboard */; };
 		D993A7772062A10400387AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D993A7762062A10400387AD9 /* Assets.xcassets */; };
 		D993A77A2062A10400387AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993A7782062A10400387AD9 /* LaunchScreen.storyboard */; };
@@ -19,10 +24,15 @@
 /* Begin PBXFileReference section */
 		54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinimalTunerMetronome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2FBD8EE7FE49A3E9BD4A41 /* Pods-MinimalTunerMetronome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinimalTunerMetronome.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome.release.xcconfig"; sourceTree = "<group>"; };
-		D96B7DAA2063F5A00041408C /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToggleView.swift; path = MinimalTunerMetronome/UI/ToggleView.swift; sourceTree = SOURCE_ROOT; };
+		D96B7DAA2063F5A00041408C /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToggleView.swift; path = MinimalTunerMetronome/ToggleView.swift; sourceTree = SOURCE_ROOT; };
+		D98C4CF320654ED3005A5A10 /* SmallScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SmallScreenView.swift; path = MinimalTunerMetronome/SmallScreenView.swift; sourceTree = SOURCE_ROOT; };
+		D98C4CF720654F53005A5A10 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = MinimalTunerMetronome/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		D98C4CFD206556A8005A5A10 /* DigitNoteImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitNoteImages.swift; sourceTree = "<group>"; };
+		D98C4CFF206653D1005A5A10 /* MetronomeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetronomeAnimationView.swift; path = MinimalTunerMetronome/MetronomeAnimationView.swift; sourceTree = SOURCE_ROOT; };
+		D98C4D012066694B005A5A10 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformExtension.swift; sourceTree = "<group>"; };
 		D993A76C2062A10400387AD9 /* MinimalTunerMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimalTunerMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D993A76F2062A10400387AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D993A7712062A10400387AD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D993A7742062A10400387AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D993A7762062A10400387AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D993A7792062A10400387AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,15 +69,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D96B7DA92063F5500041408C /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				D96B7DAA2063F5A00041408C /* ToggleView.swift */,
-			);
-			name = UI;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		D993A7632062A10300387AD9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,13 +90,18 @@
 		D993A76E2062A10400387AD9 /* MinimalTunerMetronome */ = {
 			isa = PBXGroup;
 			children = (
-				D96B7DA92063F5500041408C /* UI */,
+				D96B7DAA2063F5A00041408C /* ToggleView.swift */,
+				D98C4CF720654F53005A5A10 /* ViewController.swift */,
+				D98C4CF320654ED3005A5A10 /* SmallScreenView.swift */,
+				D98C4CFF206653D1005A5A10 /* MetronomeAnimationView.swift */,
 				D993A76F2062A10400387AD9 /* AppDelegate.swift */,
-				D993A7712062A10400387AD9 /* ViewController.swift */,
 				D993A7732062A10400387AD9 /* Main.storyboard */,
 				D993A7762062A10400387AD9 /* Assets.xcassets */,
 				D993A7782062A10400387AD9 /* LaunchScreen.storyboard */,
 				D993A77B2062A10400387AD9 /* Info.plist */,
+				D98C4CFD206556A8005A5A10 /* DigitNoteImages.swift */,
+				D98C4D012066694B005A5A10 /* SoundPlayer.swift */,
+				D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */,
 			);
 			path = MinimalTunerMetronome;
 			sourceTree = "<group>";
@@ -226,8 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D993A7722062A10400387AD9 /* ViewController.swift in Sources */,
+				D98C4D00206653D1005A5A10 /* MetronomeAnimationView.swift in Sources */,
+				D98C4D022066694B005A5A10 /* SoundPlayer.swift in Sources */,
 				D96B7DAB2063F5A00041408C /* ToggleView.swift in Sources */,
+				D98C4CFE206556A8005A5A10 /* DigitNoteImages.swift in Sources */,
+				D98C4CF420654ED3005A5A10 /* SmallScreenView.swift in Sources */,
+				D98C4CF820654F53005A5A10 /* ViewController.swift in Sources */,
+				D98C4D04206767E9005A5A10 /* CGAffineTransformExtension.swift in Sources */,
 				D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YUWPSE2UN9;
 				INFOPLIST_FILE = MinimalTunerMetronome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shinerightstudio.MinimalTunerMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YUWPSE2UN9;
 				INFOPLIST_FILE = MinimalTunerMetronome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shinerightstudio.MinimalTunerMetronome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
