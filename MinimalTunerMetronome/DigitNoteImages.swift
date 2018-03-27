@@ -14,10 +14,6 @@ class DigitNoteImages {
         UIImage(named: "9")
     ]
     
-    enum Note: Int {
-        case A = 0, B, C, D, E, F, G
-    }
-    
     static let notes = [
         UIImage(named: "A"),
         UIImage(named: "B"),

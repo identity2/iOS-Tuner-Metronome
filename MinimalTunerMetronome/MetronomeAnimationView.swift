@@ -76,7 +76,7 @@ class MetronomeAnimationView: UIView {
         eyesImageView.frame.size = CGSize(width: rodWidth, height: rodHeight)
         mouthImageView.frame.size = CGSize(width: rodWidth, height: rodHeight)
         mouthImageView.image = mouthClosedImage
-        eyesImageView.layer.position.x = rodImageView.frame.width / CGFloat(2)
+        eyesImageView.layer.position.x = rodImageView.frame.width * CGFloat(0.5)
         
         rodView.addSubview(rodImageView)
         rodView.addSubview(eyesImageView)

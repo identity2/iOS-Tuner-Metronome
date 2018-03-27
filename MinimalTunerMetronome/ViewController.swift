@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var metronomeView: MetronomeAnimationView!
     @IBOutlet weak var smallScreenView: UIImageView!
     @IBOutlet weak var tempoView: SmallScreenView!
+    @IBOutlet weak var tunerView: TunerView!
     
     // MARK: Constants.
     let defaultBPM = 80
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         tempoView.positionSubviews()
         metronomeView.positionSubviews()
         toggleView.positionSubviews()
+        tunerView.positionSubviews()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
     // MARK: Actions.
     @IBAction func leftButtonDown(_ sender: UIButton) {
         adjustBPM(positive: false)
+        invalidateBPMAdjustTimer()
         bpmAdjustTimer = Timer.scheduledTimer(withTimeInterval: fastAdjustInterval, repeats: true, block: {_ in self.fastAdjustBPM(positive: false)})
     }
     
@@ -54,6 +57,7 @@ class ViewController: UIViewController {
     
     @IBAction func rightButtonDown(_ sender: UIButton) {
         adjustBPM(positive: true)
+        invalidateBPMAdjustTimer()
         bpmAdjustTimer = Timer.scheduledTimer(withTimeInterval: fastAdjustInterval, repeats: true, block: {_ in self.fastAdjustBPM(positive: true)})
     }
     @IBAction func rightButtonUpOutside(_ sender: UIButton) {
@@ -69,10 +73,11 @@ class ViewController: UIViewController {
     @objc func toggleValueChanged(toggleView: ToggleView) {
         if toggleView.inLeft {
             // Tuner.
-            
+            startUpTuner()
             shutDownMetronome()
         } else {
             // Metronome.
+            shutDownTuner()
             startUpMetronome()
         }
     }
@@ -96,6 +101,14 @@ class ViewController: UIViewController {
         metronomeView.isHidden = true
         
         metronomeView.stopMetronome()
+    }
+    
+    private func startUpTuner() {
+        tunerView.isHidden = false
+    }
+    
+    private func shutDownTuner() {
+        tunerView.isHidden = true
     }
     
     private func adjustBPM(positive: Bool) {

@@ -18,3 +18,10 @@
 * Completed Metronome.
 
 **Commit**
+
+[2018.03.27]
+* Fixed a bug that when both Left and Right Button are pressed, the tempo indicator will increase/decrease nonstop.
+* Designed graphical assets of Tuner.
+* Coded the positioning of `TunerView.swift`.
+
+**Commit**
