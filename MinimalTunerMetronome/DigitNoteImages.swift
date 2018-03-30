@@ -23,4 +23,10 @@ class DigitNoteImages {
         UIImage(named: "F"),
         UIImage(named: "G")
     ]
+    
+    static let accidental = [
+        nil,
+        UIImage(named: "sharp_icon"),
+        UIImage(named: "flat_icon")
+    ]
 }

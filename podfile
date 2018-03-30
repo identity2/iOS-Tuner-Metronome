@@ -7,4 +7,5 @@ target 'MinimalTunerMetronome' do
 
   # Pods for MinimalTunerMetronome
   pod 'AudioKit', '~> 4.1'
+  pod 'Google-Mobile-Ads-SDK'
 end

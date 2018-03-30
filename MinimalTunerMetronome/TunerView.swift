@@ -1,6 +1,11 @@
 import UIKit
 
-class TunerView: UIView {
+class TunerView: UIView, TunerDelegate {
+    let tolerance = 7.0
+    let arrowLerpSmooth = 3.0
+    
+    let tuner = Tuner()
+    
     let backgroundImageView = UIImageView(image: UIImage(named: "tuner_background"))
     let arrowImageView = UIImageView(image: UIImage(named: "tuner_arrow"))
     let headImageView = UIImageView()
@@ -12,9 +17,6 @@ class TunerView: UIView {
     let headCorrect = UIImage(named: "tuner_head_correct")
     let headFlat = UIImage(named: "tuner_head_flat")
     let headSharp = UIImage(named: "tuner_head_sharp")
-    
-    let sharpImage = UIImage(named: "sharp_icon")
-    let flatImage = UIImage(named: "flat_icon")
     
     let headAnchorPoint = CGPoint(x: 0.5, y: 1.0)
     let headHeightProportionalToViewHeight = CGFloat(0.2849)
@@ -39,10 +41,10 @@ class TunerView: UIView {
     let markPositionYProportionalToViewHeight = CGFloat(0.1003)
     let markPositionXProportionalToViewWidth = CGFloat(0.6398)
     
+    // MARK: Function.
     func positionSubviews() {
         backgroundImageView.frame.size = frame.size
         
-        headImageView.image = headRegular
         headImageView.frame.size.height = headHeightProportionalToViewHeight * frame.height
         headImageView.frame.size.width = headImageView.frame.height * headAspectRatio
         headImageView.layer.anchorPoint = headAnchorPoint
@@ -59,7 +61,6 @@ class TunerView: UIView {
         arrowImageView.layer.zPosition = arrowPositionZ
         arrowImageView.layer.position = CGPoint(x: frame.width * CGFloat(0.5), y: arrowPositionYProportionalToViewHeight * frame.height)
         
-        noteImageView.image = DigitNoteImages.notes[0]
         noteImageView.frame.size.height = frame.height * noteHeightProportionalToViewHeight
         noteImageView.frame.size.width = noteImageView.frame.height * noteAspectRatio
         noteImageView.layer.position.x = frame.width * notePositionXProportionalToViewWidth
@@ -76,5 +77,41 @@ class TunerView: UIView {
         addSubview(arrowImageView)
         addSubview(noteImageView)
         addSubview(markImageView)
+        
+        tuner.delegate = self
+    }
+    
+    func startTuner() {
+        tuner.start()
+        
+        eyesImageView.layer.position = headImageView.layer.position
+        arrowImageView.layer.setAffineTransform(CGAffineTransform.identity)
+        headImageView.image = headRegular
+        noteImageView.image = DigitNoteImages.notes[0]
+        markImageView.image = nil
+    }
+    
+    func stopTuner() {
+        tuner.stop()
+    }
+    
+    // MARK: Tuner Delegate.
+    func tunerDidTick(pitch: Pitch, delta: Double) {
+        noteImageView.image = DigitNoteImages.notes[pitch.note.note.rawValue]
+        markImageView.image = DigitNoteImages.accidental[pitch.note.accidental.rawValue]
+        
+        var affineTransform = CGAffineTransform.identity
+        var eyePositionX = headImageView.layer.position.x
+        
+        if abs(delta) < tolerance {
+            headImageView.image = headCorrect
+        } else {
+            headImageView.image = delta > 0 ? headSharp : headFlat
+            affineTransform = affineTransform.rotated(by: CGFloat(delta * Double.pi) / 180.0)
+            eyePositionX += eyesImageView.frame.size.width * eyesPositionXLimitProportionalToWidth * CGFloat(delta) / CGFloat(tuner.totalTickCount)
+        }
+        
+        arrowImageView.layer.setAffineTransform(affineTransform)
+        eyesImageView.layer.position.x = eyePositionX
     }
 }

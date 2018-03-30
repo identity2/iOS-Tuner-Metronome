@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C9AC199F8AAC02FE9207F768 /* Pods_MinimalTunerMetronome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */; };
 		D9239C43206A6F02008C2E71 /* TunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9239C42206A6F02008C2E71 /* TunerView.swift */; };
+		D94F786C206D33C800224D1F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F786B206D33C700224D1F /* Note.swift */; };
 		D96B7DAB2063F5A00041408C /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96B7DAA2063F5A00041408C /* ToggleView.swift */; };
 		D98C4CF420654ED3005A5A10 /* SmallScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CF320654ED3005A5A10 /* SmallScreenView.swift */; };
 		D98C4CF820654F53005A5A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CF720654F53005A5A10 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		D98C4D00206653D1005A5A10 /* MetronomeAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4CFF206653D1005A5A10 /* MetronomeAnimationView.swift */; };
 		D98C4D022066694B005A5A10 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4D012066694B005A5A10 /* SoundPlayer.swift */; };
 		D98C4D04206767E9005A5A10 /* CGAffineTransformExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */; };
+		D98DC6E7206BEAAC00CF6F59 /* Tuner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DC6E6206BEAAC00CF6F59 /* Tuner.swift */; };
+		D98DC6E9206BEB0A00CF6F59 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98DC6E8206BEB0A00CF6F59 /* Pitch.swift */; };
 		D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D993A76F2062A10400387AD9 /* AppDelegate.swift */; };
 		D993A7752062A10400387AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993A7732062A10400387AD9 /* Main.storyboard */; };
 		D993A7772062A10400387AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D993A7762062A10400387AD9 /* Assets.xcassets */; };
@@ -26,6 +29,7 @@
 		54B1867E120407826DF2F3D4 /* Pods_MinimalTunerMetronome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MinimalTunerMetronome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2FBD8EE7FE49A3E9BD4A41 /* Pods-MinimalTunerMetronome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MinimalTunerMetronome.release.xcconfig"; path = "Pods/Target Support Files/Pods-MinimalTunerMetronome/Pods-MinimalTunerMetronome.release.xcconfig"; sourceTree = "<group>"; };
 		D9239C42206A6F02008C2E71 /* TunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunerView.swift; sourceTree = "<group>"; };
+		D94F786B206D33C700224D1F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D96B7DAA2063F5A00041408C /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToggleView.swift; path = MinimalTunerMetronome/ToggleView.swift; sourceTree = SOURCE_ROOT; };
 		D98C4CF320654ED3005A5A10 /* SmallScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SmallScreenView.swift; path = MinimalTunerMetronome/SmallScreenView.swift; sourceTree = SOURCE_ROOT; };
 		D98C4CF720654F53005A5A10 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = MinimalTunerMetronome/ViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -33,6 +37,8 @@
 		D98C4CFF206653D1005A5A10 /* MetronomeAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MetronomeAnimationView.swift; path = MinimalTunerMetronome/MetronomeAnimationView.swift; sourceTree = SOURCE_ROOT; };
 		D98C4D012066694B005A5A10 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformExtension.swift; sourceTree = "<group>"; };
+		D98DC6E6206BEAAC00CF6F59 /* Tuner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tuner.swift; sourceTree = "<group>"; };
+		D98DC6E8206BEB0A00CF6F59 /* Pitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		D993A76C2062A10400387AD9 /* MinimalTunerMetronome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimalTunerMetronome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D993A76F2062A10400387AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D993A7742062A10400387AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +111,9 @@
 				D98C4D012066694B005A5A10 /* SoundPlayer.swift */,
 				D98C4D03206767E9005A5A10 /* CGAffineTransformExtension.swift */,
 				D9239C42206A6F02008C2E71 /* TunerView.swift */,
+				D98DC6E6206BEAAC00CF6F59 /* Tuner.swift */,
+				D98DC6E8206BEB0A00CF6F59 /* Pitch.swift */,
+				D94F786B206D33C700224D1F /* Note.swift */,
 			);
 			path = MinimalTunerMetronome;
 			sourceTree = "<group>";
@@ -243,7 +252,10 @@
 				D98C4CF420654ED3005A5A10 /* SmallScreenView.swift in Sources */,
 				D98C4CF820654F53005A5A10 /* ViewController.swift in Sources */,
 				D98C4D04206767E9005A5A10 /* CGAffineTransformExtension.swift in Sources */,
+				D98DC6E7206BEAAC00CF6F59 /* Tuner.swift in Sources */,
+				D98DC6E9206BEB0A00CF6F59 /* Pitch.swift in Sources */,
 				D993A7702062A10400387AD9 /* AppDelegate.swift in Sources */,
+				D94F786C206D33C800224D1F /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

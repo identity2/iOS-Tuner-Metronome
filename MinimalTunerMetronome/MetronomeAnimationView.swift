@@ -40,6 +40,8 @@ class MetronomeAnimationView: UIView {
         
         updateBPM(bpm)
         
+        playSoundAndMouthAnimation()
+        
         prevTime = Date().timeIntervalSinceReferenceDate
         timer = Timer.scheduledTimer(timeInterval: timerTickInterval, target: self, selector: #selector(MetronomeAnimationView.timerTick), userInfo: nil, repeats: true)
     }

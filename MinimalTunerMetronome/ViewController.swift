@@ -1,3 +1,4 @@
+import GoogleMobileAds
 import UIKit
 
 class ViewController: UIViewController {
@@ -11,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempoView: SmallScreenView!
     @IBOutlet weak var tunerView: TunerView!
     
+    @IBOutlet weak var adBannerView: GADBannerView!
+    
     // MARK: Constants.
     let defaultBPM = 80
     let fastAdjustInterval = 0.2
@@ -21,13 +24,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shutDownMetronome()
+        let request = GADRequest()
+        request.testDevices = ["15338fef8420ce834b432ce21af4af4a"]
+        adBannerView.adUnitID = "ca-app-pub-3679599074148025/7729845973"
+        adBannerView.rootViewController = self
+        adBannerView.load(GADRequest())
         
         toggleView.addTarget(self, action: #selector(ViewController.toggleValueChanged(toggleView:)), for: .valueChanged)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        startUpTuner()
+        shutDownMetronome()
         
         tempoView.positionSubviews()
         metronomeView.positionSubviews()
@@ -68,8 +78,6 @@ class ViewController: UIViewController {
         invalidateBPMAdjustTimer()
     }
     
-    
-    
     @objc func toggleValueChanged(toggleView: ToggleView) {
         if toggleView.inLeft {
             // Tuner.
@@ -105,10 +113,14 @@ class ViewController: UIViewController {
     
     private func startUpTuner() {
         tunerView.isHidden = false
+        
+        tunerView.startTuner()
     }
     
     private func shutDownTuner() {
         tunerView.isHidden = true
+        
+        tunerView.stopTuner()
     }
     
     private func adjustBPM(positive: Bool) {

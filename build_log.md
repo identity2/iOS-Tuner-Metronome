@@ -25,3 +25,15 @@
 * Coded the positioning of `TunerView.swift`.
 
 **Commit**
+
+[2018.03.28]
+* Coded the frequency polling code for `Tuner.swift`.
+
+[2018.03.29]
+* Coded `Pitch.swift` and `Note.swift` to convert frequency to note.
+
+[2018.03.30]
+* Completed the tuner. The entire app is done.
+* Added Admob banner.
+
+**Commit**
