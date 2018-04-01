@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +17,31 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shine Right Studio Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qXA-yN-vQT">
+                                <rect key="frame" x="82.666666666666671" y="608" width="248.66666666666663" height="69.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qXA-yN-vQT" secondAttribute="height" multiplier="769:215" id="GUA-dX-8yf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashscreen_icon" translatesAutoresizingMaskIntoConstraints="NO" id="R6j-Va-Mwx">
+                                <rect key="frame" x="82.666666666666671" y="172.66666666666666" width="248.66666666666663" height="259.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="R6j-Va-Mwx" secondAttribute="height" multiplier="1011:1058" id="YnC-ta-vHD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qXA-yN-vQT" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.6" id="Cek-GB-978"/>
+                            <constraint firstItem="R6j-Va-Mwx" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.6" id="ZN3-05-bL7"/>
+                            <constraint firstItem="R6j-Va-Mwx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="e7o-J6-nG4"/>
+                            <constraint firstItem="qXA-yN-vQT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="imF-Ha-Vt7"/>
+                            <constraint firstItem="qXA-yN-vQT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.7" id="nwt-kj-unA"/>
+                            <constraint firstItem="R6j-Va-Mwx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pYr-DA-0xk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +50,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Shine Right Studio Logo" width="769" height="215"/>
+        <image name="splashscreen_icon" width="1011" height="1058"/>
+    </resources>
 </document>

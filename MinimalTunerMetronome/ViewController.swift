@@ -1,7 +1,7 @@
 import GoogleMobileAds
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GADBannerViewDelegate {
 
     // MARK: Views.
     @IBOutlet weak var leftButtonView: UIButton!
@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempoView: SmallScreenView!
     @IBOutlet weak var tunerView: TunerView!
     
-    @IBOutlet weak var adBannerView: GADBannerView!
+    var adBannerView: GADBannerView!
     
     // MARK: Constants.
     let defaultBPM = 80
@@ -24,13 +24,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        adBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        
+        addBannerViewToView(adBannerView)
+        
         let request = GADRequest()
-        request.testDevices = ["15338fef8420ce834b432ce21af4af4a"]
+        request.testDevices = [kGADSimulatorID, "15338fef8420ce834b432ce21af4af4a"]
         adBannerView.adUnitID = "ca-app-pub-3679599074148025/7729845973"
         adBannerView.rootViewController = self
+        adBannerView.delegate = self
         adBannerView.load(GADRequest())
         
         toggleView.addTarget(self, action: #selector(ViewController.toggleValueChanged(toggleView:)), for: .valueChanged)
+    }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: view.safeAreaLayoutGuide,
+                                attribute: .bottom,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view.safeAreaLayoutGuide,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+        print(bannerView.frame.size)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -137,6 +164,19 @@ class ViewController: UIViewController {
         if let timer = bpmAdjustTimer {
             timer.invalidate()
         }
+    }
+    
+    // Ad delegate
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Received Ad")
+    }
+    
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("Will present Ad.")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Failed, error: \(error.description)")
     }
 }
 

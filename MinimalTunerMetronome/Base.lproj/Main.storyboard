@@ -89,14 +89,6 @@
                                     <constraint firstAttribute="width" secondItem="IG7-Bm-UJX" secondAttribute="height" multiplier="902:1190" id="tDe-YR-TR1"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ff4-jM-6FZ" userLabel="Ad Banner View" customClass="GADBannerView">
-                                <rect key="frame" x="47" y="686" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="CgZ-Uv-VEb"/>
-                                    <constraint firstAttribute="height" constant="50" id="FTV-Bk-vc0"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -105,10 +97,8 @@
                             <constraint firstItem="0hE-M9-qUV" firstAttribute="height" secondItem="Vct-hK-ZbC" secondAttribute="height" id="1xo-ac-ZTK"/>
                             <constraint firstItem="9hz-DG-QpT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4dg-sd-jr4"/>
                             <constraint firstItem="Vct-hK-ZbC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-5" id="6gL-wk-bQR"/>
-                            <constraint firstItem="ff4-jM-6FZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6ii-c3-0Ab"/>
                             <constraint firstItem="IG7-Bm-UJX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.693" id="A97-wi-Rqe"/>
                             <constraint firstItem="9hz-DG-QpT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.9" id="AW6-cE-PyN"/>
-                            <constraint firstItem="ff4-jM-6FZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BtH-hz-fEp"/>
                             <constraint firstItem="qnK-OZ-r4I" firstAttribute="leading" secondItem="ocr-uk-kLF" secondAttribute="trailing" constant="7" id="FFM-zF-BqN"/>
                             <constraint firstItem="ocr-uk-kLF" firstAttribute="leading" secondItem="zXO-rV-tuu" secondAttribute="trailing" id="Ge7-jt-Ehz"/>
                             <constraint firstItem="AcV-ky-Uc8" firstAttribute="centerX" secondItem="Vct-hK-ZbC" secondAttribute="centerX" id="HHK-3K-9sl"/>
@@ -134,7 +124,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="adBannerView" destination="ff4-jM-6FZ" id="WXV-7x-3zf"/>
                         <outlet property="leftButtonView" destination="0hE-M9-qUV" id="rU1-Pc-Iqg"/>
                         <outlet property="metronomeView" destination="9hz-DG-QpT" id="eC1-dr-8C1"/>
                         <outlet property="rightButtonView" destination="eSZ-NY-SXQ" id="eb8-Os-7yB"/>

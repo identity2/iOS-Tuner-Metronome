@@ -37,3 +37,10 @@
 * Added Admob banner.
 
 **Commit**
+
+[2018.04.01]
+* Added app icon, splash screen.
+* Recofigure Admob Banner by code.
+* Archive and upload to App Store.
+
+**Commit** (ver 1.0, build 1)
