@@ -43,4 +43,10 @@
 * Recofigure Admob Banner by code.
 * Archive and upload to App Store.
 
-**Commit** (ver 1.0, build 1)
+**Commit** (ver 1.1, build 2)
+
+[2018.05.08]
+* Disabled screen sleeping.
+* Made the polling interval of Tuner bigger.
+
+**Commit** (ver 1.2, build 3)

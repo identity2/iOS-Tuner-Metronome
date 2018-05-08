@@ -6,7 +6,7 @@ class Tuner {
     let silence: AKBooster
     
     let totalTickCount = 50
-    let pollingInterval = 0.02
+    let pollingInterval = 0.05
     
     var delegate: TunerDelegate?
     

@@ -24,12 +24,14 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         adBannerView = GADBannerView(adSize: kGADAdSizeBanner)
         
         addBannerViewToView(adBannerView)
         
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "15338fef8420ce834b432ce21af4af4a"]
+        request.testDevices = [kGADSimulatorID, "5fc46f5579c1c56ef8095e225e129b50"]
         adBannerView.adUnitID = "ca-app-pub-3679599074148025/7729845973"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
@@ -57,7 +59,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
                                 multiplier: 1,
                                 constant: 0)
             ])
-        print(bannerView.frame.size)
     }
     
     override func viewDidAppear(_ animated: Bool) {

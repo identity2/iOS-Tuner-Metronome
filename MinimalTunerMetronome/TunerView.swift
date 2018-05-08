@@ -86,7 +86,6 @@ class TunerView: UIView, TunerDelegate {
         
         eyesImageView.layer.position = headImageView.layer.position
         arrowImageView.layer.setAffineTransform(CGAffineTransform.identity)
-        headImageView.image = headRegular
         noteImageView.image = DigitNoteImages.notes[0]
         markImageView.image = nil
     }
