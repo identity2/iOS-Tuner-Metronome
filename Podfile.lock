@@ -1,17 +1,17 @@
 PODS:
-  - AudioKit (4.1):
-    - AudioKit/UI (= 4.1)
-  - AudioKit/UI (4.1)
-  - Google-Mobile-Ads-SDK (7.30.0)
+  - AudioKit (4.3):
+    - AudioKit/UI (= 4.3)
+  - AudioKit/UI (4.3)
+  - Google-Mobile-Ads-SDK (7.31.0)
 
 DEPENDENCIES:
-  - AudioKit (~> 4.1)
+  - AudioKit (~> 4.2)
   - Google-Mobile-Ads-SDK
 
 SPEC CHECKSUMS:
-  AudioKit: 0bb2b3e61e4ac908fe576ad7a1d89c597156bb47
-  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
+  AudioKit: 95bd2427c1afa7954d71b0c6195a09b87b7448bc
+  Google-Mobile-Ads-SDK: 6e529e748b45507a2ca904e0b5a52669ba3920c4
 
-PODFILE CHECKSUM: 89cb25d548c47fc85a5e594d58b4daf3536e763d
+PODFILE CHECKSUM: a9ec183e74b9e43d5547e1c4863425c2c7c4703a
 
 COCOAPODS: 1.4.0

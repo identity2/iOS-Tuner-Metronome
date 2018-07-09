@@ -50,3 +50,8 @@
 * Made the polling interval of Tuner bigger.
 
 **Commit** (ver 1.2, build 3)
+
+[2018.07.09]
+* Updated logo.
+
+**Commit** (ver 1.2.1, build 4)

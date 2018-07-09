@@ -6,6 +6,6 @@ target 'MinimalTunerMetronome' do
   use_frameworks!
 
   # Pods for MinimalTunerMetronome
-  pod 'AudioKit', '~> 4.1'
+  pod 'AudioKit', '~> 4.2'
   pod 'Google-Mobile-Ads-SDK'
 end
