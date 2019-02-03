@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MinimalTunerMetronome" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hE-M9-qUV" userLabel="Left Button">
-                                <rect key="frame" x="305.5" y="114.5" width="81.5" height="118"/>
+                                <rect key="frame" x="69.5" y="76.5" width="50.5" height="73.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0hE-M9-qUV" secondAttribute="height" multiplier="92:133" id="31k-t0-p5u"/>
                                 </constraints>
@@ -33,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSZ-NY-SXQ" userLabel="Right Button">
-                                <rect key="frame" x="627" y="114.5" width="81.5" height="118"/>
+                                <rect key="frame" x="284" y="76.5" width="50.5" height="73.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eSZ-NY-SXQ" secondAttribute="height" multiplier="92:133" id="P72-sf-scv"/>
                                 </constraints>
@@ -45,14 +43,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="small_frame" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-hK-ZbC" userLabel="Small Screen">
-                                <rect key="frame" x="407" y="114.5" width="200" height="118"/>
+                                <rect key="frame" x="140" y="76.5" width="124" height="73.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="4oq-gp-rqA"/>
                                     <constraint firstAttribute="width" secondItem="Vct-hK-ZbC" secondAttribute="height" multiplier="170:100" id="792-Pl-hGd"/>
                                 </constraints>
                             </imageView>
                             <button userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocr-uk-kLF" userLabel="Toggle" customClass="ToggleView" customModule="MinimalTunerMetronome" customModuleProvider="target">
-                                <rect key="frame" x="437" y="1091" width="150" height="63.5"/>
+                                <rect key="frame" x="165.5" y="716.5" width="83" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ocr-uk-kLF" secondAttribute="height" multiplier="236:100" id="Bsu-Kr-lYh"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="cUE-UG-SW1"/>
@@ -60,30 +58,30 @@
                                 <state key="normal" image="toggle_box"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuner_icon" translatesAutoresizingMaskIntoConstraints="NO" id="zXO-rV-tuu" userLabel="Tuner Icon">
-                                <rect key="frame" x="342" y="1075.5" width="95" height="95"/>
+                                <rect key="frame" x="113" y="707.5" width="52.5" height="52.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zXO-rV-tuu" secondAttribute="height" multiplier="1:1" id="YNq-J8-CLM"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metronome_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qnK-OZ-r4I" userLabel="Metronome Icon">
-                                <rect key="frame" x="594" y="1075.5" width="94.5" height="95"/>
+                                <rect key="frame" x="255.5" y="707.5" width="52.5" height="52.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qnK-OZ-r4I" secondAttribute="height" multiplier="1:1" id="Rua-YN-p9i"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hz-DG-QpT" userLabel="Metronome View" customClass="MetronomeAnimationView" customModule="MinimalTunerMetronome" customModuleProvider="target">
-                                <rect key="frame" x="259" y="350.5" width="506" height="546.5"/>
+                                <rect key="frame" x="41" y="228.5" width="332" height="358.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9hz-DG-QpT" secondAttribute="height" multiplier="548:592" id="ttQ-FC-ZUS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-ky-Uc8" userLabel="Small Screen Inner" customClass="SmallScreenView" customModule="MinimalTunerMetronome" customModuleProvider="target">
-                                <rect key="frame" x="421.5" y="128.5" width="170" height="89"/>
+                                <rect key="frame" x="149" y="86" width="106" height="54.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IG7-Bm-UJX" userLabel="Tuner View" customClass="TunerView" customModule="MinimalTunerMetronome" customModuleProvider="target">
-                                <rect key="frame" x="153" y="81" width="718" height="946.5"/>
+                                <rect key="frame" x="20.5" y="116.5" width="373" height="491.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IG7-Bm-UJX" secondAttribute="height" multiplier="902:1190" id="tDe-YR-TR1"/>
@@ -139,11 +137,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="left_arrow" width="92" height="133"/>
-        <image name="metronome_icon" width="220" height="212"/>
-        <image name="right_arrow" width="92" height="133"/>
-        <image name="small_frame" width="265" height="186"/>
-        <image name="toggle_box" width="329" height="139"/>
-        <image name="tuner_icon" width="220" height="212"/>
+        <image name="left_arrow" width="69" height="99.75"/>
+        <image name="metronome_icon" width="165" height="159"/>
+        <image name="right_arrow" width="69" height="99.75"/>
+        <image name="small_frame" width="198.75" height="139.5"/>
+        <image name="toggle_box" width="246.75" height="104.25"/>
+        <image name="tuner_icon" width="165" height="159"/>
     </resources>
 </document>
